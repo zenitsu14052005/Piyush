@@ -1,3 +1,21 @@
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.setHeader('Content-Type', 'text/html');
+  res.end(`
+    <html>
+      <head>
+        <title>Your Web View</title>
+      </head>
+      <body style="margin: 0; padding: 0;">
+        <iframe width="100%" height="100%" src="https://axocoder.vercel.app/" frameborder="0" allowfullscreen></iframe>
+      </body>
+    </html>`);
+});
+
+server.listen(3000, () => {
+  console.log('Server Online because of Axo Coder ✅!!');
+});
 require('dotenv').config();
 const express = require('express');
 const app = express();
@@ -27,7 +45,7 @@ client.on('ready', async () => {
             current: 4,
             id: Discord.getUUID(),
         })
-.setAssetsLargeImage(`mp:attachments/1115220304629874720/1175873012969513080/download.gif?ex=656cd014&is=655a5b14&hm=a04ab8bf9fff7c2eb85938d8594dd1afe4e78a632b779915a0ec31553b5172c8&`)
+.setAssetsLargeImage(`mp:attachments/1115220304629874720/1210821385090498681/a_265266cd68dfe739e0fbba183f3728fa.gif?ex=65ebf44a&is=65d97f4a&hm=ec8d0cd48d4ef1d6cbeb875385e96e0b02304761c2cfea056ec69c811ac4b6fe&`)
          
         .setAssetsLargeText(`Hakai!!`)
         .addButton(`BRUTAL BEERUS`, `https://discord.gg/C6TWAAWAU9`)
